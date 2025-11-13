@@ -74,7 +74,7 @@ const [resendDisabled, setResendDisabled] = useState(false);
    if (!otpSent || resendOtp) {
     setMessage('Sending OTP....');
   await axios.post(
-    'http://localhost:5000/api/user/whatsapp-login', // Endpoint to send OTP
+    'https://cropdetectimodelbackend-production.up.railway.app/api/user/whatsapp-login', // Endpoint to send OTP
     { mobile_number },
     { withCredentials: true }
   );
@@ -88,7 +88,7 @@ else {
       // If OTP is already sent, proceed to verify OTP
        setLoading(true);
       await axios.post(
-        'http://localhost:3000/api/user/whatsapp-verify-otp',  // Endpoint to verify OTP
+        'https://cropdetectimodelbackend-production.up.railway.app/api/user/whatsapp-verify-otp',  // Endpoint to verify OTP
         { mobile_number, otp },
         { withCredentials: true }
       );

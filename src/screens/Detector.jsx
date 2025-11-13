@@ -74,7 +74,7 @@ export default function Detector({ t }) {
       formData.append("image", blob, "photo.png");
 
       const res = await axios.post(
-        "http://localhost:5000/api/detect/crop",
+        "https://cropdetectimodelbackend-production.up.railway.app/api/detect/crop",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
