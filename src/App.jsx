@@ -30,7 +30,8 @@ function AppContent({ t, lang, setLang, farmerName, setFarmerName, onLogin, logo
   const location = useLocation();
 
   // Hide layout elements on the home page
-  const hideLayout = location.pathname === "/home" &&  "/login";
+  const hideLayout = location.pathname === "/home" || location.pathname === "/login";
+
 
   return (
     <div className="min-h-screen w-full flex flex-col">
