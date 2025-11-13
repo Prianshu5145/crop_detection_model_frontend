@@ -1,13 +1,18 @@
-export default function TabButton({ active, label, onClick, icon }) {
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+export default function TabButton({ to, label, icon }) {
   return (
-    <button
-      className={`flex flex-col items-center text-xs ${
-        active ? "text-green-600 font-bold" : "text-gray-600"
-      }`}
-      onClick={onClick}
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        `flex flex-col items-center text-xs transition-colors ${
+          isActive ? "text-green-600 font-bold" : "text-gray-600"
+        }`
+      }
     >
       <span className="text-lg">{icon}</span>
       {label}
-    </button>
+    </NavLink>
   );
 }
