@@ -3,6 +3,7 @@ const STRINGS = {
     // App & Navigation
     app: "Kisan Saathi",
     home: "Home",
+    dashboard: "Dashboard",
     mandi: "Mandi",
     finance: "Finance",
     advisory: "Advisory",
